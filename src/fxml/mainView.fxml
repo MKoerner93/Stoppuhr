@@ -11,26 +11,32 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<SplitPane dividerPositions="0.29797979797979796" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/20.0.1">
+<SplitPane dividerPositions="0.29797979797979796" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="267.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainViewController">
   <items>
     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
          <children>
-            <VBox alignment="CENTER" layoutY="-1.0" prefHeight="400.0" prefWidth="175.0">
+            <VBox alignment="CENTER" layoutY="-1.0" prefHeight="275.0" prefWidth="175.0">
                <children>
-                  <Label text="Name" />
-                  <TextField maxWidth="170.0" prefWidth="170.0" />
-                  <HBox alignment="CENTER" prefHeight="38.0" prefWidth="175.0">
+                  <Label fx:id="labName" text="Name" />
+                  <TextField fx:id="tfName" maxWidth="170.0" prefWidth="170.0" />
+                  <HBox fx:id="buttStop" alignment="CENTER" prefHeight="38.0" prefWidth="175.0">
                      <children>
-                        <Button mnemonicParsing="false" prefWidth="60.0" text="Start">
+                        <Button fx:id="buttStart" mnemonicParsing="false" prefWidth="60.0" text="Start">
                            <HBox.margin>
                               <Insets right="5.0" />
                            </HBox.margin>
                         </Button>
-                        <Button mnemonicParsing="false" prefWidth="60.0" text="Stop">
+                        <Button fx:id="buttStopp" mnemonicParsing="false" prefWidth="60.0" text="Stop">
                            <HBox.margin>
                               <Insets left="5.0" />
                            </HBox.margin>
                         </Button>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="34.0" prefWidth="175.0">
+                     <children>
+                        <Label fx:id="labTimeName" text="Zeit: " />
+                        <Label fx:id="labTime" />
                      </children>
                   </HBox>
                </children>
@@ -38,10 +44,10 @@
          </children></AnchorPane>
     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
          <children>
-            <TableView layoutY="-2.0" prefHeight="400.0" prefWidth="420.0">
+            <TableView fx:id="tvMainTable" layoutY="-2.0" prefHeight="275.0" prefWidth="420.0">
               <columns>
-                <TableColumn prefWidth="210.0" text="Name" />
-                <TableColumn prefWidth="210.0" text="Zeit" />
+                <TableColumn fx:id="tcName" prefWidth="210.0" text="Name" />
+                <TableColumn fx:id="tcTime" prefWidth="210.0" text="Zeit" />
               </columns>
             </TableView>
          </children></AnchorPane>
